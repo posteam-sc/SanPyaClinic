@@ -1,0 +1,710 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="POSModelStoreContainer" CdmEntityContainer="POSEntities">
+    <EntitySetMapping Name="AttachGiftForTransactions">
+      <EntityTypeMapping TypeName="POSModel.AttachGiftForTransaction">
+        <MappingFragment StoreEntitySet="AttachGiftForTransaction">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AttachGiftId" ColumnName="AttachGiftId" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Authorizes">
+      <EntityTypeMapping TypeName="POSModel.Authorize">
+        <MappingFragment StoreEntitySet="Authorize">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="licenseKey" ColumnName="licenseKey" />
+          <ScalarProperty Name="macAddress" ColumnName="macAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Brands">
+      <EntityTypeMapping TypeName="POSModel.Brand">
+        <MappingFragment StoreEntitySet="Brand">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="POSModel.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConsignmentCounters">
+      <EntityTypeMapping TypeName="POSModel.ConsignmentCounter">
+        <MappingFragment StoreEntitySet="ConsignmentCounter">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CounterLocation" ColumnName="CounterLocation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Counters">
+      <EntityTypeMapping TypeName="POSModel.Counter">
+        <MappingFragment StoreEntitySet="Counter">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Currencies">
+      <EntityTypeMapping TypeName="POSModel.Currency">
+        <MappingFragment StoreEntitySet="Currency">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="POSModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="NRC" ColumnName="NRC" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="TownShip" ColumnName="TownShip" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DailyRecords">
+      <EntityTypeMapping TypeName="POSModel.DailyRecord">
+        <MappingFragment StoreEntitySet="DailyRecord">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CounterId" ColumnName="CounterId" />
+          <ScalarProperty Name="StartDateTime" ColumnName="StartDateTime" />
+          <ScalarProperty Name="EndDateTime" ColumnName="EndDateTime" />
+          <ScalarProperty Name="OpeningBalance" ColumnName="OpeningBalance" />
+          <ScalarProperty Name="ClosingBalance" ColumnName="ClosingBalance" />
+          <ScalarProperty Name="AccuralAmount" ColumnName="AccuralAmount" />
+          <ScalarProperty Name="DifferenceAmount" ColumnName="DifferenceAmount" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeleteLogs">
+      <EntityTypeMapping TypeName="POSModel.DeleteLog">
+        <MappingFragment StoreEntitySet="DeleteLog">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CounterId" ColumnName="CounterId" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="TransactionDetailId" ColumnName="TransactionDetailId" />
+          <ScalarProperty Name="IsParent" ColumnName="IsParent" />
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GiftCards">
+      <EntityTypeMapping TypeName="POSModel.GiftCard">
+        <MappingFragment StoreEntitySet="GiftCard">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GiftCardInCustomers">
+      <EntityTypeMapping TypeName="POSModel.GiftCardInCustomer">
+        <MappingFragment StoreEntitySet="GiftCardInCustomer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="GiftCardId" ColumnName="GiftCardId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GiftSystems">
+      <EntityTypeMapping TypeName="POSModel.GiftSystem">
+        <MappingFragment StoreEntitySet="GiftSystem">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsGWP" ColumnName="IsGWP" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MustBuyCostFrom" ColumnName="MustBuyCostFrom" />
+          <ScalarProperty Name="MustBuyCostTo" ColumnName="MustBuyCostTo" />
+          <ScalarProperty Name="MustIncludeProductId" ColumnName="MustIncludeProductId" />
+          <ScalarProperty Name="FilterBrandId" ColumnName="FilterBrandId" />
+          <ScalarProperty Name="FilterCategoryId" ColumnName="FilterCategoryId" />
+          <ScalarProperty Name="FilterSubCategoryId" ColumnName="FilterSubCategoryId" />
+          <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+          <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+          <ScalarProperty Name="GiftProductId" ColumnName="GiftProductId" />
+          <ScalarProperty Name="GiftDiscountAmountForGiftProduct" ColumnName="GiftDiscountAmountForGiftProduct" />
+          <ScalarProperty Name="GiftCashAmount" ColumnName="GiftCashAmount" />
+          <ScalarProperty Name="GiftDiscountAmount" ColumnName="GiftDiscountAmount" />
+          <ScalarProperty Name="GiftDiscountPercent" ColumnName="GiftDiscountPercent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Loc_CustomerPoint">
+      <EntityTypeMapping TypeName="POSModel.Loc_CustomerPoint">
+        <MappingFragment StoreEntitySet="Loc_CustomerPoint">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="OldPoint" ColumnName="OldPoint" />
+          <ScalarProperty Name="TotalRedeemPoint" ColumnName="TotalRedeemPoint" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Loc_PointRedeemHistory">
+      <EntityTypeMapping TypeName="POSModel.Loc_PointRedeemHistory">
+        <MappingFragment StoreEntitySet="Loc_PointRedeemHistory">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="RedeemPoint" ColumnName="RedeemPoint" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="CounterId" ColumnName="CounterId" />
+          <ScalarProperty Name="CasherId" ColumnName="CasherId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MainPurchases">
+      <EntityTypeMapping TypeName="POSModel.MainPurchase">
+        <MappingFragment StoreEntitySet="MainPurchase">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="VoucherNo" ColumnName="VoucherNo" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="Cash" ColumnName="Cash" />
+          <ScalarProperty Name="OldCreditAmount" ColumnName="OldCreditAmount" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentTypes">
+      <EntityTypeMapping TypeName="POSModel.PaymentType">
+        <MappingFragment StoreEntitySet="PaymentType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="POSModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="ProductLocation" ColumnName="ProductLocation" />
+          <ScalarProperty Name="ProductCategoryId" ColumnName="ProductCategoryId" />
+          <ScalarProperty Name="ProductSubCategoryId" ColumnName="ProductSubCategoryId" />
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+          <ScalarProperty Name="TaxId" ColumnName="TaxId" />
+          <ScalarProperty Name="MinStockQty" ColumnName="MinStockQty" />
+          <ScalarProperty Name="DiscountRate" ColumnName="DiscountRate" />
+          <ScalarProperty Name="IsWrapper" ColumnName="IsWrapper" />
+          <ScalarProperty Name="IsConsignment" ColumnName="IsConsignment" />
+          <ScalarProperty Name="IsDiscontinue" ColumnName="IsDiscontinue" />
+          <ScalarProperty Name="ConsignmentPrice" ColumnName="ConsignmentPrice" />
+          <ScalarProperty Name="ConsignmentCounterId" ColumnName="ConsignmentCounterId" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+          <ScalarProperty Name="IsNotifyMinStock" ColumnName="IsNotifyMinStock" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductCategories">
+      <EntityTypeMapping TypeName="POSModel.ProductCategory">
+        <MappingFragment StoreEntitySet="ProductCategory">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductInfoes">
+      <EntityTypeMapping TypeName="POSModel.ProductInfo">
+        <MappingFragment StoreEntitySet="ProductInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+          <ScalarProperty Name="ManufacturedCode" ColumnName="ManufacturedCode" />
+          <ScalarProperty Name="LocationInWareHose" ColumnName="LocationInWareHose" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductSubCategories">
+      <EntityTypeMapping TypeName="POSModel.ProductSubCategory">
+        <MappingFragment StoreEntitySet="ProductSubCategory">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ProductCategoryId" ColumnName="ProductCategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PurchaseDetails">
+      <EntityTypeMapping TypeName="POSModel.PurchaseDetail">
+        <MappingFragment StoreEntitySet="PurchaseDetail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MainPurchaseId" ColumnName="MainPurchaseId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoleManagements">
+      <EntityTypeMapping TypeName="POSModel.RoleManagement">
+        <MappingFragment StoreEntitySet="RoleManagement">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RuleFeature" ColumnName="RuleFeature" />
+          <ScalarProperty Name="UserRoleId" ColumnName="UserRoleId" />
+          <ScalarProperty Name="IsAllowed" ColumnName="IsAllowed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Settings">
+      <EntityTypeMapping TypeName="POSModel.Setting">
+        <MappingFragment StoreEntitySet="Setting">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="POSModel.Supplier">
+        <MappingFragment StoreEntitySet="Supplier">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Taxes">
+      <EntityTypeMapping TypeName="POSModel.Tax">
+        <MappingFragment StoreEntitySet="Tax">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TaxPercent" ColumnName="TaxPercent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transactions">
+      <EntityTypeMapping TypeName="POSModel.Transaction">
+        <MappingFragment StoreEntitySet="Transaction">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CounterId" ColumnName="CounterId" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+          <ScalarProperty Name="IsComplete" ColumnName="IsComplete" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="PaymentTypeId" ColumnName="PaymentTypeId" />
+          <ScalarProperty Name="TaxAmount" ColumnName="TaxAmount" />
+          <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="RecieveAmount" ColumnName="RecieveAmount" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="GiftCardId" ColumnName="GiftCardId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransactionDetails">
+      <EntityTypeMapping TypeName="POSModel.TransactionDetail">
+        <MappingFragment StoreEntitySet="TransactionDetail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="DiscountRate" ColumnName="DiscountRate" />
+          <ScalarProperty Name="TaxRate" ColumnName="TaxRate" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Units">
+      <EntityTypeMapping TypeName="POSModel.Unit">
+        <MappingFragment StoreEntitySet="Unit">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsePrePaidDebts">
+      <EntityTypeMapping TypeName="POSModel.UsePrePaidDebt">
+        <MappingFragment StoreEntitySet="UsePrePaidDebt">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreditTransactionId" ColumnName="CreditTransactionId" />
+          <ScalarProperty Name="PrePaidDebtTransactionId" ColumnName="PrePaidDebtTransactionId" />
+          <ScalarProperty Name="UseAmount" ColumnName="UseAmount" />
+          <ScalarProperty Name="CashierId" ColumnName="CashierId" />
+          <ScalarProperty Name="CounterId" ColumnName="CounterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="POSModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UserRoleId" ColumnName="UserRoleId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRoles">
+      <EntityTypeMapping TypeName="POSModel.UserRole">
+        <MappingFragment StoreEntitySet="UserRole">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WrapperItems">
+      <EntityTypeMapping TypeName="POSModel.WrapperItem">
+        <MappingFragment StoreEntitySet="WrapperItem">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ParentProductId" ColumnName="ParentProductId" />
+          <ScalarProperty Name="ChildProductId" ColumnName="ChildProductId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ClearDBConnections" FunctionName="POSModel.Store.ClearDBConnections" />
+    <FunctionImportMapping FunctionImportName="ExportDatabase" FunctionName="POSModel.Store.ExportDatabase" />
+    <FunctionImportMapping FunctionImportName="GetConsignmentProduct" FunctionName="POSModel.Store.GetConsignmentProduct">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.GetConsignmentProduct_Result">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="Counter_Name" ColumnName="Counter Name" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DiscountRate" ColumnName="DiscountRate" />
+          <ScalarProperty Name="TaxRate" ColumnName="TaxRate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCustomerSaleByCuId" FunctionName="POSModel.Store.GetCustomerSaleByCuId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.GetCustomerSaleByCuId_Result">
+          <ScalarProperty Name="Customer_Name" ColumnName="Customer Name" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product Name" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Total_Amount" ColumnName="Total Amount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCustomerSaleById" FunctionName="POSModel.Store.GetCustomerSaleById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.GetCustomerSaleById_Result">
+          <ScalarProperty Name="Customer_Name" ColumnName="Customer Name" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product Name" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Total_Amount" ColumnName="Total Amount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetProductReport" FunctionName="POSModel.Store.GetProductReport">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.GetProductReport_Result">
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Brand_Name" ColumnName="Brand Name" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Segment_Name" ColumnName="Segment Name" />
+          <ScalarProperty Name="SubSegment_Name" ColumnName="SubSegment Name" />
+          <ScalarProperty Name="IsDiscontinue" ColumnName="IsDiscontinue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="InsertDraft" FunctionName="POSModel.Store.InsertDraft" />
+    <FunctionImportMapping FunctionImportName="InsertRefundTransaction" FunctionName="POSModel.Store.InsertRefundTransaction" />
+    <FunctionImportMapping FunctionImportName="InsertTransaction" FunctionName="POSModel.Store.InsertTransaction" />
+    <FunctionImportMapping FunctionImportName="Paid" FunctionName="POSModel.Store.Paid" />
+    <FunctionImportMapping FunctionImportName="ProductReportByBId" FunctionName="POSModel.Store.ProductReportByBId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.ProductReportByBId_Result">
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Segment_Name" ColumnName="Segment Name" />
+          <ScalarProperty Name="SubSegment_Name" ColumnName="SubSegment Name" />
+          <ScalarProperty Name="Brand_Name" ColumnName="Brand Name" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="IsDiscontinue" ColumnName="IsDiscontinue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ProductReportByCId" FunctionName="POSModel.Store.ProductReportByCId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.ProductReportByCId_Result">
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Segment_Name" ColumnName="Segment Name" />
+          <ScalarProperty Name="SubSegment_Name" ColumnName="SubSegment Name" />
+          <ScalarProperty Name="Brand_Name" ColumnName="Brand Name" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="IsDiscontinue" ColumnName="IsDiscontinue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ProductReportByCIdAndBId" FunctionName="POSModel.Store.ProductReportByCIdAndBId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.ProductReportByCIdAndBId_Result">
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Segment_Name" ColumnName="Segment Name" />
+          <ScalarProperty Name="SubSegment_Name" ColumnName="SubSegment Name" />
+          <ScalarProperty Name="Brand_Name" ColumnName="Brand Name" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="IsDiscontinue" ColumnName="IsDiscontinue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ProductReportBySCIdAndCId" FunctionName="POSModel.Store.ProductReportBySCIdAndCId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.ProductReportBySCIdAndCId_Result">
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Segment_Name" ColumnName="Segment Name" />
+          <ScalarProperty Name="SubSegment_Name" ColumnName="SubSegment Name" />
+          <ScalarProperty Name="Brand_Name" ColumnName="Brand Name" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="IsDiscontinue" ColumnName="IsDiscontinue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ProductReportBySCIdAndCIdAndBId" FunctionName="POSModel.Store.ProductReportBySCIdAndCIdAndBId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.ProductReportBySCIdAndCIdAndBId_Result">
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Segment_Name" ColumnName="Segment Name" />
+          <ScalarProperty Name="SubSegment_Name" ColumnName="SubSegment Name" />
+          <ScalarProperty Name="Brand_Name" ColumnName="Brand Name" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="IsDiscontinue" ColumnName="IsDiscontinue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="RefundItemList" FunctionName="POSModel.Store.RefundItemList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.RefundItemList_Result">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemQty" ColumnName="ItemQty" />
+          <ScalarProperty Name="ItemTotalAmount" ColumnName="ItemTotalAmount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SaleBreakDownByRangeWithSaleTrueValue" FunctionName="POSModel.Store.SaleBreakDownByRangeWithSaleTrueValue">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.SaleBreakDownByRangeWithSaleTrueValue_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TotalSale" ColumnName="TotalSale" />
+          <ScalarProperty Name="SaleQty" ColumnName="SaleQty" />
+          <ScalarProperty Name="TotalRefund" ColumnName="TotalRefund" />
+          <ScalarProperty Name="RefundQty" ColumnName="RefundQty" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SaleBreakDownByRangeWithUnitValue" FunctionName="POSModel.Store.SaleBreakDownByRangeWithUnitValue">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.SaleBreakDownByRangeWithUnitValue_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TotalSale" ColumnName="TotalSale" />
+          <ScalarProperty Name="SaleQty" ColumnName="SaleQty" />
+          <ScalarProperty Name="TotalRefund" ColumnName="TotalRefund" />
+          <ScalarProperty Name="RefundQty" ColumnName="RefundQty" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SaleBreakDownBySegmentWithSaleTrueValue" FunctionName="POSModel.Store.SaleBreakDownBySegmentWithSaleTrueValue">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.SaleBreakDownBySegmentWithSaleTrueValue_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TotalSale" ColumnName="TotalSale" />
+          <ScalarProperty Name="SaleQty" ColumnName="SaleQty" />
+          <ScalarProperty Name="TotalRefund" ColumnName="TotalRefund" />
+          <ScalarProperty Name="RefundQty" ColumnName="RefundQty" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SaleBreakDownBySegmentWithUnitValue" FunctionName="POSModel.Store.SaleBreakDownBySegmentWithUnitValue">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.SaleBreakDownBySegmentWithUnitValue_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TotalSale" ColumnName="TotalSale" />
+          <ScalarProperty Name="SaleQty" ColumnName="SaleQty" />
+          <ScalarProperty Name="TotalRefund" ColumnName="TotalRefund" />
+          <ScalarProperty Name="RefundQty" ColumnName="RefundQty" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SaleItemListByDate" FunctionName="POSModel.Store.SaleItemListByDate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.SaleItemListByDate_Result">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemQty" ColumnName="ItemQty" />
+          <ScalarProperty Name="ItemTotalAmount" ColumnName="ItemTotalAmount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectItemListByDate" FunctionName="POSModel.Store.SelectItemListByDate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.SelectItemListByDate_Result">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemQty" ColumnName="ItemQty" />
+          <ScalarProperty Name="ItemTotalAmount" ColumnName="ItemTotalAmount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTaxesListByDate" FunctionName="POSModel.Store.SelectTaxesListByDate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.SelectTaxesListByDate_Result">
+          <ScalarProperty Name="TDate" ColumnName="TDate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Top100SaleItemList" FunctionName="POSModel.Store.Top100SaleItemList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.Top100SaleItemList_Result">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="DisCount" ColumnName="DisCount" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="ItemQty" ColumnName="ItemQty" />
+          <ScalarProperty Name="ItemTotalAmount" ColumnName="ItemTotalAmount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TransactionDetailByItem" FunctionName="POSModel.Store.TransactionDetailByItem">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.TransactionDetailByItem_Result">
+          <ScalarProperty Name="ItemNo" ColumnName="ItemNo" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TransactionDetailReport" FunctionName="POSModel.Store.TransactionDetailReport">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.TransactionDetailReport_Result">
+          <ScalarProperty Name="ItemNo" ColumnName="ItemNo" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+          <ScalarProperty Name="Counter_Name" ColumnName="Counter Name" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TransactionDetailReportByBId" FunctionName="POSModel.Store.TransactionDetailReportByBId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.TransactionDetailReportByBId_Result">
+          <ScalarProperty Name="ItemNo" ColumnName="ItemNo" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+          <ScalarProperty Name="Counter_Name" ColumnName="Counter Name" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TransactionDetailReportByBIdAndCId" FunctionName="POSModel.Store.TransactionDetailReportByBIdAndCId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.TransactionDetailReportByBIdAndCId_Result">
+          <ScalarProperty Name="ItemNo" ColumnName="ItemNo" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+          <ScalarProperty Name="Counter_Name" ColumnName="Counter Name" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TransactionDetailReportByBIdAndCIdAndSCId" FunctionName="POSModel.Store.TransactionDetailReportByBIdAndCIdAndSCId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.TransactionDetailReportByBIdAndCIdAndSCId_Result">
+          <ScalarProperty Name="ItemNo" ColumnName="ItemNo" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+          <ScalarProperty Name="Counter_Name" ColumnName="Counter Name" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TransactionDetailReportByCId" FunctionName="POSModel.Store.TransactionDetailReportByCId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.TransactionDetailReportByCId_Result">
+          <ScalarProperty Name="ItemNo" ColumnName="ItemNo" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+          <ScalarProperty Name="Counter_Name" ColumnName="Counter Name" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TransactionDetailReportBySCIdAndCId" FunctionName="POSModel.Store.TransactionDetailReportBySCIdAndCId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSModel.TransactionDetailReportBySCIdAndCId_Result">
+          <ScalarProperty Name="ItemNo" ColumnName="ItemNo" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+          <ScalarProperty Name="Counter_Name" ColumnName="Counter Name" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

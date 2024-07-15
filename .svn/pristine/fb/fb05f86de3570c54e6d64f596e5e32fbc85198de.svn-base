@@ -1,0 +1,1718 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="POSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="POSModelStoreContainer">
+    <EntitySet Name="AttachGiftForTransaction" EntityType="POSModel.Store.AttachGiftForTransaction" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Authorize" EntityType="POSModel.Store.Authorize" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Brand" EntityType="POSModel.Store.Brand" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="City" EntityType="POSModel.Store.City" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConsignmentCounter" EntityType="POSModel.Store.ConsignmentCounter" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Counter" EntityType="POSModel.Store.Counter" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Currency" EntityType="POSModel.Store.Currency" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Customer" EntityType="POSModel.Store.Customer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DailyDutyPhysio" EntityType="POSModel.Store.DailyDutyPhysio" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DailyRecord" EntityType="POSModel.Store.DailyRecord" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DeleteLog" EntityType="POSModel.Store.DeleteLog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DoctorPhysio" EntityType="POSModel.Store.DoctorPhysio" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Expense" EntityType="POSModel.Store.Expense" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ExpenseCategory" EntityType="POSModel.Store.ExpenseCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ExpenseDetail" EntityType="POSModel.Store.ExpenseDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GiftCard" EntityType="POSModel.Store.GiftCard" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GiftCardInCustomer" EntityType="POSModel.Store.GiftCardInCustomer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GiftSystem" EntityType="POSModel.Store.GiftSystem" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Group" EntityType="POSModel.Store.Group" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GroupByPhysio" EntityType="POSModel.Store.GroupByPhysio" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GroupByTransaction" EntityType="POSModel.Store.GroupByTransaction" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Loc_CustomerPoint" EntityType="POSModel.Store.Loc_CustomerPoint" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Loc_PointRedeemHistory" EntityType="POSModel.Store.Loc_PointRedeemHistory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MainPurchase" EntityType="POSModel.Store.MainPurchase" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PaymentType" EntityType="POSModel.Store.PaymentType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Product" EntityType="POSModel.Store.Product" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductCategory" EntityType="POSModel.Store.ProductCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductInfo" EntityType="POSModel.Store.ProductInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductPriceChange" EntityType="POSModel.Store.ProductPriceChange" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductSubCategory" EntityType="POSModel.Store.ProductSubCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PurchaseDeleteLog" EntityType="POSModel.Store.PurchaseDeleteLog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PurchaseDetail" EntityType="POSModel.Store.PurchaseDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PurchaseDetailInTransaction" EntityType="POSModel.Store.PurchaseDetailInTransaction" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RoleManagement" EntityType="POSModel.Store.RoleManagement" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Setting" EntityType="POSModel.Store.Setting" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SPDetail" EntityType="POSModel.Store.SPDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Supplier" EntityType="POSModel.Store.Supplier" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tax" EntityType="POSModel.Store.Tax" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Townshipdb" EntityType="POSModel.Store.Townshipdb" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Transaction" EntityType="POSModel.Store.Transaction" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TransactionDetail" EntityType="POSModel.Store.TransactionDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Unit" EntityType="POSModel.Store.Unit" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsePrePaidDebt" EntityType="POSModel.Store.UsePrePaidDebt" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="POSModel.Store.User" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserRole" EntityType="POSModel.Store.UserRole" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WrapperItem" EntityType="POSModel.Store.WrapperItem" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Customer_City" Association="POSModel.Store.FK_Customer_City">
+      <End Role="City" EntitySet="City" />
+      <End Role="Customer" EntitySet="Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DailyRecord_Counter" Association="POSModel.Store.FK_DailyRecord_Counter">
+      <End Role="Counter" EntitySet="Counter" />
+      <End Role="DailyRecord" EntitySet="DailyRecord" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DeleteLog_Counter" Association="POSModel.Store.FK_DeleteLog_Counter">
+      <End Role="Counter" EntitySet="Counter" />
+      <End Role="DeleteLog" EntitySet="DeleteLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DeleteLog_Transaction" Association="POSModel.Store.FK_DeleteLog_Transaction">
+      <End Role="Transaction" EntitySet="Transaction" />
+      <End Role="DeleteLog" EntitySet="DeleteLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DeleteLog_TransactionDetail" Association="POSModel.Store.FK_DeleteLog_TransactionDetail">
+      <End Role="TransactionDetail" EntitySet="TransactionDetail" />
+      <End Role="DeleteLog" EntitySet="DeleteLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DeleteLog_User" Association="POSModel.Store.FK_DeleteLog_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="DeleteLog" EntitySet="DeleteLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Expense_ExpenseCategory" Association="POSModel.Store.FK_Expense_ExpenseCategory">
+      <End Role="ExpenseCategory" EntitySet="ExpenseCategory" />
+      <End Role="Expense" EntitySet="Expense" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Expense_User" Association="POSModel.Store.FK_Expense_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Expense" EntitySet="Expense" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExpenseDetail_Expense" Association="POSModel.Store.FK_ExpenseDetail_Expense">
+      <End Role="Expense" EntitySet="Expense" />
+      <End Role="ExpenseDetail" EntitySet="ExpenseDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GroupByPhysio_DoctorPhysio" Association="POSModel.Store.FK_GroupByPhysio_DoctorPhysio">
+      <End Role="DoctorPhysio" EntitySet="DoctorPhysio" />
+      <End Role="GroupByPhysio" EntitySet="GroupByPhysio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GroupByPhysio_Group" Association="POSModel.Store.FK_GroupByPhysio_Group">
+      <End Role="Group" EntitySet="Group" />
+      <End Role="GroupByPhysio" EntitySet="GroupByPhysio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GroupByTransaction_DoctorPhysio" Association="POSModel.Store.FK_GroupByTransaction_DoctorPhysio">
+      <End Role="DoctorPhysio" EntitySet="DoctorPhysio" />
+      <End Role="GroupByTransaction" EntitySet="GroupByTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GroupByTransaction_GroupByTransaction" Association="POSModel.Store.FK_GroupByTransaction_GroupByTransaction">
+      <End Role="Transaction" EntitySet="Transaction" />
+      <End Role="GroupByTransaction" EntitySet="GroupByTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MainPurchase_Supplier" Association="POSModel.Store.FK_MainPurchase_Supplier">
+      <End Role="Supplier" EntitySet="Supplier" />
+      <End Role="MainPurchase" EntitySet="MainPurchase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Brand" Association="POSModel.Store.FK_Product_Brand">
+      <End Role="Brand" EntitySet="Brand" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ConsignmentCounter" Association="POSModel.Store.FK_Product_ConsignmentCounter">
+      <End Role="ConsignmentCounter" EntitySet="ConsignmentCounter" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ProductCategory" Association="POSModel.Store.FK_Product_ProductCategory">
+      <End Role="ProductCategory" EntitySet="ProductCategory" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ProductType" Association="POSModel.Store.FK_Product_ProductType">
+      <End Role="ProductSubCategory" EntitySet="ProductSubCategory" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Tax" Association="POSModel.Store.FK_Product_Tax">
+      <End Role="Tax" EntitySet="Tax" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Unit" Association="POSModel.Store.FK_Product_Unit">
+      <End Role="Unit" EntitySet="Unit" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductPriceChange_Product" Association="POSModel.Store.FK_ProductPriceChange_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="ProductPriceChange" EntitySet="ProductPriceChange" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductPriceChange_User" Association="POSModel.Store.FK_ProductPriceChange_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="ProductPriceChange" EntitySet="ProductPriceChange" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductSubCategory_ProductCategory" Association="POSModel.Store.FK_ProductSubCategory_ProductCategory">
+      <End Role="ProductCategory" EntitySet="ProductCategory" />
+      <End Role="ProductSubCategory" EntitySet="ProductSubCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseDeleteLog_Counter" Association="POSModel.Store.FK_PurchaseDeleteLog_Counter">
+      <End Role="Counter" EntitySet="Counter" />
+      <End Role="PurchaseDeleteLog" EntitySet="PurchaseDeleteLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseDeleteLog_MainPurchase" Association="POSModel.Store.FK_PurchaseDeleteLog_MainPurchase">
+      <End Role="MainPurchase" EntitySet="MainPurchase" />
+      <End Role="PurchaseDeleteLog" EntitySet="PurchaseDeleteLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseDeleteLog_PurchaseDetail" Association="POSModel.Store.FK_PurchaseDeleteLog_PurchaseDetail">
+      <End Role="PurchaseDetail" EntitySet="PurchaseDetail" />
+      <End Role="PurchaseDeleteLog" EntitySet="PurchaseDeleteLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseDeleteLog_User" Association="POSModel.Store.FK_PurchaseDeleteLog_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="PurchaseDeleteLog" EntitySet="PurchaseDeleteLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseDetail_MainPurchase" Association="POSModel.Store.FK_PurchaseDetail_MainPurchase">
+      <End Role="MainPurchase" EntitySet="MainPurchase" />
+      <End Role="PurchaseDetail" EntitySet="PurchaseDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseDetail_Product" Association="POSModel.Store.FK_PurchaseDetail_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="PurchaseDetail" EntitySet="PurchaseDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseDetailInTransaction_Product" Association="POSModel.Store.FK_PurchaseDetailInTransaction_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="PurchaseDetailInTransaction" EntitySet="PurchaseDetailInTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseDetailInTransaction_PurchaseDetail" Association="POSModel.Store.FK_PurchaseDetailInTransaction_PurchaseDetail">
+      <End Role="PurchaseDetail" EntitySet="PurchaseDetail" />
+      <End Role="PurchaseDetailInTransaction" EntitySet="PurchaseDetailInTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseDetailInTransaction_TransactionDetail" Association="POSModel.Store.FK_PurchaseDetailInTransaction_TransactionDetail">
+      <End Role="TransactionDetail" EntitySet="TransactionDetail" />
+      <End Role="PurchaseDetailInTransaction" EntitySet="PurchaseDetailInTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleManagement_UserRole" Association="POSModel.Store.FK_RoleManagement_UserRole">
+      <End Role="UserRole" EntitySet="UserRole" />
+      <End Role="RoleManagement" EntitySet="RoleManagement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SPDetail_Product" Association="POSModel.Store.FK_SPDetail_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="SPDetail" EntitySet="SPDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SPDetail_Product1" Association="POSModel.Store.FK_SPDetail_Product1">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="SPDetail" EntitySet="SPDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SPDetail_TransactionDetail" Association="POSModel.Store.FK_SPDetail_TransactionDetail">
+      <End Role="TransactionDetail" EntitySet="TransactionDetail" />
+      <End Role="SPDetail" EntitySet="SPDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaction_Counter" Association="POSModel.Store.FK_Transaction_Counter">
+      <End Role="Counter" EntitySet="Counter" />
+      <End Role="Transaction" EntitySet="Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaction_Customer" Association="POSModel.Store.FK_Transaction_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Transaction" EntitySet="Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaction_DoctorPhysio" Association="POSModel.Store.FK_Transaction_DoctorPhysio">
+      <End Role="DoctorPhysio" EntitySet="DoctorPhysio" />
+      <End Role="Transaction" EntitySet="Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaction_GiftCard" Association="POSModel.Store.FK_Transaction_GiftCard">
+      <End Role="GiftCard" EntitySet="GiftCard" />
+      <End Role="Transaction" EntitySet="Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaction_PaymentType" Association="POSModel.Store.FK_Transaction_PaymentType">
+      <End Role="PaymentType" EntitySet="PaymentType" />
+      <End Role="Transaction" EntitySet="Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaction_Transaction" Association="POSModel.Store.FK_Transaction_Transaction">
+      <End Role="Transaction" EntitySet="Transaction" />
+      <End Role="Transaction1" EntitySet="Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaction_User" Association="POSModel.Store.FK_Transaction_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Transaction" EntitySet="Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransactionDetail_Product" Association="POSModel.Store.FK_TransactionDetail_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="TransactionDetail" EntitySet="TransactionDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransactionDetail_Transaction" Association="POSModel.Store.FK_TransactionDetail_Transaction">
+      <End Role="Transaction" EntitySet="Transaction" />
+      <End Role="TransactionDetail" EntitySet="TransactionDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsePrePaidDebt_Counter" Association="POSModel.Store.FK_UsePrePaidDebt_Counter">
+      <End Role="Counter" EntitySet="Counter" />
+      <End Role="UsePrePaidDebt" EntitySet="UsePrePaidDebt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsePrePaidDebt_Transaction" Association="POSModel.Store.FK_UsePrePaidDebt_Transaction">
+      <End Role="Transaction" EntitySet="Transaction" />
+      <End Role="UsePrePaidDebt" EntitySet="UsePrePaidDebt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsePrePaidDebt_Transaction1" Association="POSModel.Store.FK_UsePrePaidDebt_Transaction1">
+      <End Role="Transaction" EntitySet="Transaction" />
+      <End Role="UsePrePaidDebt" EntitySet="UsePrePaidDebt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsePrePaidDebt_User" Association="POSModel.Store.FK_UsePrePaidDebt_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UsePrePaidDebt" EntitySet="UsePrePaidDebt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_UserRole" Association="POSModel.Store.FK_User_UserRole">
+      <End Role="UserRole" EntitySet="UserRole" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WrapperItem_Product" Association="POSModel.Store.FK_WrapperItem_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="WrapperItem" EntitySet="WrapperItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WrapperItem_Product1" Association="POSModel.Store.FK_WrapperItem_Product1">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="WrapperItem" EntitySet="WrapperItem" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AttachGiftForTransaction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AttachGiftId" Type="int" Nullable="false" />
+    <Property Name="TransactionId" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Authorize">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="licenseKey" Type="varchar(max)" />
+    <Property Name="macAddress" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Brand">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CityName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ConsignmentCounter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="CounterLocation" Type="nvarchar" MaxLength="200" />
+    <Property Name="PhoneNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Counter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Currency">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" />
+    <Property Name="Symbol" Type="varchar" MaxLength="5" />
+    <Property Name="CurrencyCode" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="varchar" MaxLength="5" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="NRC" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="CityId" Type="int" />
+    <Property Name="TownShipId" Type="int" />
+    <Property Name="Gender" Type="varchar" MaxLength="10" />
+    <Property Name="Birthday" Type="date" />
+    <Property Name="CustomerCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DailyDutyPhysio">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="StaffID" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="DutyDate" Type="datetime" Nullable="false" />
+    <Property Name="Shift" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="GroupID" Type="int" />
+  </EntityType>
+  <EntityType Name="DailyRecord">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CounterId" Type="int" />
+    <Property Name="StartDateTime" Type="datetime" />
+    <Property Name="EndDateTime" Type="datetime" />
+    <Property Name="OpeningBalance" Type="bigint" />
+    <Property Name="ClosingBalance" Type="bigint" />
+    <Property Name="AccuralAmount" Type="bigint" />
+    <Property Name="DifferenceAmount" Type="bigint" />
+    <Property Name="Comment" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="DeleteLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="CounterId" Type="int" />
+    <Property Name="TransactionId" Type="varchar" MaxLength="20" />
+    <Property Name="TransactionDetailId" Type="bigint" />
+    <Property Name="IsParent" Type="bit" />
+    <Property Name="DeletedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DoctorPhysio">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IsDoctor" Type="bit" />
+    <Property Name="ChargesPerPatient" Type="int" />
+    <Property Name="PhysicoCharges" Type="int" />
+    <Property Name="IsInhouse" Type="bit" />
+    <Property Name="ForPhysioTrain" Type="decimal" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Degree" Type="nvarchar" MaxLength="500" />
+    <Property Name="Specialisation" Type="nvarchar" MaxLength="500" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="6" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="IsPercent" Type="bit" />
+  </EntityType>
+  <EntityType Name="Expense">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ExpenseNo" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="ExpenseDate" Type="datetime" />
+    <Property Name="IsApproved" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedUser" Type="int" Nullable="false" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="UpdatedUser" Type="int" />
+    <Property Name="TotalExpenseAmount" Type="decimal" Scale="2" />
+    <Property Name="Comment" Type="nvarchar(max)" />
+    <Property Name="ExpenseCategoryId" Type="int" />
+    <Property Name="Count" Type="int" />
+  </EntityType>
+  <EntityType Name="ExpenseCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ExpenseDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ExpenseId" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Qty" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="Price" Type="decimal" Nullable="false" Scale="2" />
+  </EntityType>
+  <EntityType Name="GiftCard">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CardNumber" Type="varchar" MaxLength="200" />
+    <Property Name="Amount" Type="bigint" />
+  </EntityType>
+  <EntityType Name="GiftCardInCustomer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="GiftCardId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GiftSystem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IsGWP" Type="bit" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="200" />
+    <Property Name="MustBuyCostFrom" Type="bigint" />
+    <Property Name="MustBuyCostTo" Type="bigint" />
+    <Property Name="MustIncludeProductId" Type="bigint" />
+    <Property Name="FilterBrandId" Type="int" />
+    <Property Name="FilterCategoryId" Type="int" />
+    <Property Name="FilterSubCategoryId" Type="int" />
+    <Property Name="ValidFrom" Type="datetime" Nullable="false" />
+    <Property Name="ValidTo" Type="datetime" Nullable="false" />
+    <Property Name="GiftProductId" Type="bigint" />
+    <Property Name="GiftDiscountAmountForGiftProduct" Type="bigint" Nullable="false" />
+    <Property Name="GiftCashAmount" Type="bigint" Nullable="false" />
+    <Property Name="GiftDiscountAmount" Type="bigint" Nullable="false" />
+    <Property Name="GiftDiscountPercent" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Group">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GroupName" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsUse" Type="bit" />
+  </EntityType>
+  <EntityType Name="GroupByPhysio">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GroupID" Type="int" />
+    <Property Name="PhysioID" Type="int" />
+  </EntityType>
+  <EntityType Name="GroupByTransaction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionId" Type="varchar" MaxLength="20" />
+    <Property Name="GroupMemberID" Type="int" />
+    <Property Name="PaymentPercent" Type="int" />
+  </EntityType>
+  <EntityType Name="Loc_CustomerPoint">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="OldPoint" Type="int" />
+    <Property Name="TotalRedeemPoint" Type="int" />
+  </EntityType>
+  <EntityType Name="Loc_PointRedeemHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="RedeemPoint" Type="int" Nullable="false" />
+    <Property Name="DateTime" Type="datetime" Nullable="false" />
+    <Property Name="CounterId" Type="int" Nullable="false" />
+    <Property Name="CasherId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MainPurchase">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierId" Type="int" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="VoucherNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="TotalAmount" Type="bigint" />
+    <Property Name="Cash" Type="bigint" />
+    <Property Name="OldCreditAmount" Type="bigint" />
+    <Property Name="SettlementAmount" Type="bigint" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="DiscountAmount" Type="int" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsCompletedInvoice" Type="bit" />
+    <Property Name="IsCompletedPaid" Type="bit" />
+    <Property Name="IsPurchase" Type="bit" />
+  </EntityType>
+  <EntityType Name="PaymentType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="ProductCode" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Barcode" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Price" Type="bigint" Nullable="false" />
+    <Property Name="Qty" Type="int" />
+    <Property Name="BrandId" Type="int" />
+    <Property Name="ProductLocation" Type="nvarchar" MaxLength="200" />
+    <Property Name="ProductCategoryId" Type="int" />
+    <Property Name="ProductSubCategoryId" Type="int" />
+    <Property Name="UnitId" Type="int" />
+    <Property Name="TaxId" Type="int" />
+    <Property Name="MinStockQty" Type="int" />
+    <Property Name="DiscountRate" Type="decimal" Nullable="false" Precision="5" Scale="2" />
+    <Property Name="IsWrapper" Type="bit" />
+    <Property Name="IsConsignment" Type="bit" />
+    <Property Name="IsDiscontinue" Type="bit" />
+    <Property Name="ConsignmentPrice" Type="bigint" />
+    <Property Name="ConsignmentCounterId" Type="int" />
+    <Property Name="Size" Type="nvarchar" MaxLength="50" />
+    <Property Name="PurchasePrice" Type="bigint" />
+    <Property Name="IsNotifyMinStock" Type="bit" />
+    <Property Name="ChargesforDoctor" Type="int" />
+  </EntityType>
+  <EntityType Name="ProductCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Charges" Type="int" />
+  </EntityType>
+  <EntityType Name="ProductInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProductId" Type="bigint" />
+    <Property Name="Supplier" Type="nvarchar" MaxLength="200" />
+    <Property Name="ManufacturedCode" Type="bigint" />
+    <Property Name="LocationInWareHose" Type="varchar" MaxLength="200" />
+    <Property Name="Length" Type="int" />
+    <Property Name="Width" Type="int" />
+    <Property Name="Height" Type="int" />
+    <Property Name="Weight" Type="int" />
+    <Property Name="Unit" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="ProductPriceChange">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Price" Type="bigint" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="ProductId" Type="bigint" />
+    <Property Name="OldPrice" Type="bigint" />
+  </EntityType>
+  <EntityType Name="ProductSubCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="ProductCategoryId" Type="int" />
+    <Property Name="Prefix" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PurchaseDeleteLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="CounterId" Type="int" />
+    <Property Name="MainPurchaseId" Type="int" />
+    <Property Name="PurchaseDetailId" Type="int" />
+    <Property Name="IsParent" Type="bit" />
+    <Property Name="DeletedDate" Type="datetime" />
+    <Property Name="VoucherNo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PurchaseDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MainPurchaseId" Type="int" />
+    <Property Name="ProductId" Type="bigint" />
+    <Property Name="Qty" Type="int" />
+    <Property Name="UnitPrice" Type="int" />
+    <Property Name="CurrentQy" Type="int" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="DeletedDate" Type="datetime" />
+    <Property Name="DeletedUser" Type="int" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="ConvertQty" Type="numeric" Scale="2" />
+  </EntityType>
+  <EntityType Name="PurchaseDetailInTransaction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProductId" Type="bigint" />
+    <Property Name="TransactionDetailId" Type="bigint" />
+    <Property Name="PurchaseDetailId" Type="int" />
+    <Property Name="Qty" Type="int" />
+    <Property Name="Date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RoleManagement">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RuleFeature" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="UserRoleId" Type="int" Nullable="false" />
+    <Property Name="IsAllowed" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Setting">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Key" Type="varchar(max)" />
+    <Property Name="Value" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="SPDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionDetailID" Type="bigint" />
+    <Property Name="ParentProductID" Type="bigint" />
+    <Property Name="ChildProductID" Type="bigint" />
+    <Property Name="Price" Type="bigint" />
+    <Property Name="DiscountRate" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="SPDetailID" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="ContactPerson" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Tax">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="TaxPercent" Type="decimal" Precision="5" Scale="2" />
+  </EntityType>
+  <EntityType Name="Townshipdb">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TownshipName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Transaction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="DateTime" Type="datetime" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="CounterId" Type="int" />
+    <Property Name="Type" Type="varchar" MaxLength="20" />
+    <Property Name="IsPaid" Type="bit" />
+    <Property Name="IsComplete" Type="bit" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="PaymentTypeId" Type="int" />
+    <Property Name="TaxAmount" Type="int" />
+    <Property Name="DiscountAmount" Type="int" />
+    <Property Name="TotalAmount" Type="bigint" />
+    <Property Name="RecieveAmount" Type="bigint" />
+    <Property Name="ParentId" Type="varchar" MaxLength="20" />
+    <Property Name="GiftCardId" Type="int" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="DoctorID" Type="int" />
+    <Property Name="ServiceChages" Type="int" />
+    <Property Name="GroupID" Type="int" />
+    <Property Name="Consultantfees" Type="int" />
+  </EntityType>
+  <EntityType Name="TransactionDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionId" Type="varchar" MaxLength="20" />
+    <Property Name="ProductId" Type="bigint" />
+    <Property Name="Qty" Type="int" />
+    <Property Name="UnitPrice" Type="bigint" />
+    <Property Name="DiscountRate" Type="decimal" Nullable="false" Precision="5" Scale="2" />
+    <Property Name="TaxRate" Type="decimal" Nullable="false" Precision="5" Scale="2" />
+    <Property Name="TotalAmount" Type="bigint" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="InjectionRate" Type="decimal" />
+    <Property Name="PTRate" Type="decimal" />
+    <Property Name="XRayRate" Type="decimal" />
+  </EntityType>
+  <EntityType Name="Unit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UnitName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UsePrePaidDebt">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CreditTransactionId" Type="varchar" MaxLength="20" />
+    <Property Name="PrePaidDebtTransactionId" Type="varchar" MaxLength="20" />
+    <Property Name="UseAmount" Type="int" />
+    <Property Name="CashierId" Type="int" />
+    <Property Name="CounterId" Type="int" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="UserRoleId" Type="int" />
+    <Property Name="Password" Type="varchar(max)" />
+    <Property Name="DateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="WrapperItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ParentProductId" Type="bigint" />
+    <Property Name="ChildProductId" Type="bigint" />
+  </EntityType>
+  <Association Name="FK_Customer_City">
+    <End Role="City" Type="POSModel.Store.City" Multiplicity="0..1" />
+    <End Role="Customer" Type="POSModel.Store.Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="CityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DailyRecord_Counter">
+    <End Role="Counter" Type="POSModel.Store.Counter" Multiplicity="0..1" />
+    <End Role="DailyRecord" Type="POSModel.Store.DailyRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Counter">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DailyRecord">
+        <PropertyRef Name="CounterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DeleteLog_Counter">
+    <End Role="Counter" Type="POSModel.Store.Counter" Multiplicity="0..1" />
+    <End Role="DeleteLog" Type="POSModel.Store.DeleteLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Counter">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DeleteLog">
+        <PropertyRef Name="CounterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DeleteLog_Transaction">
+    <End Role="Transaction" Type="POSModel.Store.Transaction" Multiplicity="0..1" />
+    <End Role="DeleteLog" Type="POSModel.Store.DeleteLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transaction">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DeleteLog">
+        <PropertyRef Name="TransactionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DeleteLog_TransactionDetail">
+    <End Role="TransactionDetail" Type="POSModel.Store.TransactionDetail" Multiplicity="0..1" />
+    <End Role="DeleteLog" Type="POSModel.Store.DeleteLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransactionDetail">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DeleteLog">
+        <PropertyRef Name="TransactionDetailId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DeleteLog_User">
+    <End Role="User" Type="POSModel.Store.User" Multiplicity="0..1" />
+    <End Role="DeleteLog" Type="POSModel.Store.DeleteLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DeleteLog">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Expense_ExpenseCategory">
+    <End Role="ExpenseCategory" Type="POSModel.Store.ExpenseCategory" Multiplicity="0..1" />
+    <End Role="Expense" Type="POSModel.Store.Expense" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ExpenseCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Expense">
+        <PropertyRef Name="ExpenseCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Expense_User">
+    <End Role="User" Type="POSModel.Store.User" Multiplicity="1" />
+    <End Role="Expense" Type="POSModel.Store.Expense" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Expense">
+        <PropertyRef Name="CreatedUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExpenseDetail_Expense">
+    <End Role="Expense" Type="POSModel.Store.Expense" Multiplicity="1" />
+    <End Role="ExpenseDetail" Type="POSModel.Store.ExpenseDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Expense">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ExpenseDetail">
+        <PropertyRef Name="ExpenseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GroupByPhysio_DoctorPhysio">
+    <End Role="DoctorPhysio" Type="POSModel.Store.DoctorPhysio" Multiplicity="0..1" />
+    <End Role="GroupByPhysio" Type="POSModel.Store.GroupByPhysio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DoctorPhysio">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GroupByPhysio">
+        <PropertyRef Name="PhysioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GroupByPhysio_Group">
+    <End Role="Group" Type="POSModel.Store.Group" Multiplicity="0..1" />
+    <End Role="GroupByPhysio" Type="POSModel.Store.GroupByPhysio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GroupByPhysio">
+        <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GroupByTransaction_DoctorPhysio">
+    <End Role="DoctorPhysio" Type="POSModel.Store.DoctorPhysio" Multiplicity="0..1" />
+    <End Role="GroupByTransaction" Type="POSModel.Store.GroupByTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DoctorPhysio">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GroupByTransaction">
+        <PropertyRef Name="GroupMemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GroupByTransaction_GroupByTransaction">
+    <End Role="Transaction" Type="POSModel.Store.Transaction" Multiplicity="0..1" />
+    <End Role="GroupByTransaction" Type="POSModel.Store.GroupByTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transaction">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GroupByTransaction">
+        <PropertyRef Name="TransactionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MainPurchase_Supplier">
+    <End Role="Supplier" Type="POSModel.Store.Supplier" Multiplicity="0..1" />
+    <End Role="MainPurchase" Type="POSModel.Store.MainPurchase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MainPurchase">
+        <PropertyRef Name="SupplierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Brand">
+    <End Role="Brand" Type="POSModel.Store.Brand" Multiplicity="0..1" />
+    <End Role="Product" Type="POSModel.Store.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brand">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="BrandId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ConsignmentCounter">
+    <End Role="ConsignmentCounter" Type="POSModel.Store.ConsignmentCounter" Multiplicity="0..1" />
+    <End Role="Product" Type="POSModel.Store.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConsignmentCounter">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ConsignmentCounterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ProductCategory">
+    <End Role="ProductCategory" Type="POSModel.Store.ProductCategory" Multiplicity="0..1" />
+    <End Role="Product" Type="POSModel.Store.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ProductCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ProductType">
+    <End Role="ProductSubCategory" Type="POSModel.Store.ProductSubCategory" Multiplicity="0..1" />
+    <End Role="Product" Type="POSModel.Store.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductSubCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ProductSubCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Tax">
+    <End Role="Tax" Type="POSModel.Store.Tax" Multiplicity="0..1" />
+    <End Role="Product" Type="POSModel.Store.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tax">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="TaxId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Unit">
+    <End Role="Unit" Type="POSModel.Store.Unit" Multiplicity="0..1" />
+    <End Role="Product" Type="POSModel.Store.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Unit">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="UnitId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductPriceChange_Product">
+    <End Role="Product" Type="POSModel.Store.Product" Multiplicity="0..1" />
+    <End Role="ProductPriceChange" Type="POSModel.Store.ProductPriceChange" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductPriceChange">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductPriceChange_User">
+    <End Role="User" Type="POSModel.Store.User" Multiplicity="0..1" />
+    <End Role="ProductPriceChange" Type="POSModel.Store.ProductPriceChange" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductPriceChange">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductSubCategory_ProductCategory">
+    <End Role="ProductCategory" Type="POSModel.Store.ProductCategory" Multiplicity="0..1" />
+    <End Role="ProductSubCategory" Type="POSModel.Store.ProductSubCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductSubCategory">
+        <PropertyRef Name="ProductCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseDeleteLog_Counter">
+    <End Role="Counter" Type="POSModel.Store.Counter" Multiplicity="0..1" />
+    <End Role="PurchaseDeleteLog" Type="POSModel.Store.PurchaseDeleteLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Counter">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PurchaseDeleteLog">
+        <PropertyRef Name="CounterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseDeleteLog_MainPurchase">
+    <End Role="MainPurchase" Type="POSModel.Store.MainPurchase" Multiplicity="0..1" />
+    <End Role="PurchaseDeleteLog" Type="POSModel.Store.PurchaseDeleteLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MainPurchase">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PurchaseDeleteLog">
+        <PropertyRef Name="MainPurchaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseDeleteLog_PurchaseDetail">
+    <End Role="PurchaseDetail" Type="POSModel.Store.PurchaseDetail" Multiplicity="0..1" />
+    <End Role="PurchaseDeleteLog" Type="POSModel.Store.PurchaseDeleteLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PurchaseDetail">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PurchaseDeleteLog">
+        <PropertyRef Name="PurchaseDetailId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseDeleteLog_User">
+    <End Role="User" Type="POSModel.Store.User" Multiplicity="0..1" />
+    <End Role="PurchaseDeleteLog" Type="POSModel.Store.PurchaseDeleteLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PurchaseDeleteLog">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseDetail_MainPurchase">
+    <End Role="MainPurchase" Type="POSModel.Store.MainPurchase" Multiplicity="0..1" />
+    <End Role="PurchaseDetail" Type="POSModel.Store.PurchaseDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MainPurchase">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PurchaseDetail">
+        <PropertyRef Name="MainPurchaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseDetail_Product">
+    <End Role="Product" Type="POSModel.Store.Product" Multiplicity="0..1" />
+    <End Role="PurchaseDetail" Type="POSModel.Store.PurchaseDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PurchaseDetail">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseDetailInTransaction_Product">
+    <End Role="Product" Type="POSModel.Store.Product" Multiplicity="0..1" />
+    <End Role="PurchaseDetailInTransaction" Type="POSModel.Store.PurchaseDetailInTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PurchaseDetailInTransaction">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseDetailInTransaction_PurchaseDetail">
+    <End Role="PurchaseDetail" Type="POSModel.Store.PurchaseDetail" Multiplicity="0..1" />
+    <End Role="PurchaseDetailInTransaction" Type="POSModel.Store.PurchaseDetailInTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PurchaseDetail">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PurchaseDetailInTransaction">
+        <PropertyRef Name="PurchaseDetailId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseDetailInTransaction_TransactionDetail">
+    <End Role="TransactionDetail" Type="POSModel.Store.TransactionDetail" Multiplicity="0..1" />
+    <End Role="PurchaseDetailInTransaction" Type="POSModel.Store.PurchaseDetailInTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransactionDetail">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PurchaseDetailInTransaction">
+        <PropertyRef Name="TransactionDetailId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleManagement_UserRole">
+    <End Role="UserRole" Type="POSModel.Store.UserRole" Multiplicity="1" />
+    <End Role="RoleManagement" Type="POSModel.Store.RoleManagement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RoleManagement">
+        <PropertyRef Name="UserRoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SPDetail_Product">
+    <End Role="Product" Type="POSModel.Store.Product" Multiplicity="0..1" />
+    <End Role="SPDetail" Type="POSModel.Store.SPDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SPDetail">
+        <PropertyRef Name="ParentProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SPDetail_Product1">
+    <End Role="Product" Type="POSModel.Store.Product" Multiplicity="0..1" />
+    <End Role="SPDetail" Type="POSModel.Store.SPDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SPDetail">
+        <PropertyRef Name="ChildProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SPDetail_TransactionDetail">
+    <End Role="TransactionDetail" Type="POSModel.Store.TransactionDetail" Multiplicity="0..1" />
+    <End Role="SPDetail" Type="POSModel.Store.SPDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransactionDetail">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SPDetail">
+        <PropertyRef Name="TransactionDetailID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaction_Counter">
+    <End Role="Counter" Type="POSModel.Store.Counter" Multiplicity="0..1" />
+    <End Role="Transaction" Type="POSModel.Store.Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Counter">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="CounterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaction_Customer">
+    <End Role="Customer" Type="POSModel.Store.Customer" Multiplicity="0..1" />
+    <End Role="Transaction" Type="POSModel.Store.Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaction_DoctorPhysio">
+    <End Role="DoctorPhysio" Type="POSModel.Store.DoctorPhysio" Multiplicity="0..1" />
+    <End Role="Transaction" Type="POSModel.Store.Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DoctorPhysio">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="DoctorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaction_GiftCard">
+    <End Role="GiftCard" Type="POSModel.Store.GiftCard" Multiplicity="0..1" />
+    <End Role="Transaction" Type="POSModel.Store.Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GiftCard">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="GiftCardId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaction_PaymentType">
+    <End Role="PaymentType" Type="POSModel.Store.PaymentType" Multiplicity="0..1" />
+    <End Role="Transaction" Type="POSModel.Store.Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PaymentType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="PaymentTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaction_Transaction">
+    <End Role="Transaction" Type="POSModel.Store.Transaction" Multiplicity="0..1" />
+    <End Role="Transaction1" Type="POSModel.Store.Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transaction">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transaction1">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaction_User">
+    <End Role="User" Type="POSModel.Store.User" Multiplicity="0..1" />
+    <End Role="Transaction" Type="POSModel.Store.Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransactionDetail_Product">
+    <End Role="Product" Type="POSModel.Store.Product" Multiplicity="0..1" />
+    <End Role="TransactionDetail" Type="POSModel.Store.TransactionDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TransactionDetail">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransactionDetail_Transaction">
+    <End Role="Transaction" Type="POSModel.Store.Transaction" Multiplicity="0..1" />
+    <End Role="TransactionDetail" Type="POSModel.Store.TransactionDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transaction">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TransactionDetail">
+        <PropertyRef Name="TransactionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsePrePaidDebt_Counter">
+    <End Role="Counter" Type="POSModel.Store.Counter" Multiplicity="0..1" />
+    <End Role="UsePrePaidDebt" Type="POSModel.Store.UsePrePaidDebt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Counter">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UsePrePaidDebt">
+        <PropertyRef Name="CounterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsePrePaidDebt_Transaction">
+    <End Role="Transaction" Type="POSModel.Store.Transaction" Multiplicity="0..1" />
+    <End Role="UsePrePaidDebt" Type="POSModel.Store.UsePrePaidDebt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transaction">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UsePrePaidDebt">
+        <PropertyRef Name="CreditTransactionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsePrePaidDebt_Transaction1">
+    <End Role="Transaction" Type="POSModel.Store.Transaction" Multiplicity="0..1" />
+    <End Role="UsePrePaidDebt" Type="POSModel.Store.UsePrePaidDebt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transaction">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UsePrePaidDebt">
+        <PropertyRef Name="PrePaidDebtTransactionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsePrePaidDebt_User">
+    <End Role="User" Type="POSModel.Store.User" Multiplicity="0..1" />
+    <End Role="UsePrePaidDebt" Type="POSModel.Store.UsePrePaidDebt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UsePrePaidDebt">
+        <PropertyRef Name="CashierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_UserRole">
+    <End Role="UserRole" Type="POSModel.Store.UserRole" Multiplicity="0..1" />
+    <End Role="User" Type="POSModel.Store.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="UserRoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WrapperItem_Product">
+    <End Role="Product" Type="POSModel.Store.Product" Multiplicity="0..1" />
+    <End Role="WrapperItem" Type="POSModel.Store.WrapperItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="WrapperItem">
+        <PropertyRef Name="ParentProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WrapperItem_Product1">
+    <End Role="Product" Type="POSModel.Store.Product" Multiplicity="0..1" />
+    <End Role="WrapperItem" Type="POSModel.Store.WrapperItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="WrapperItem">
+        <PropertyRef Name="ChildProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="ClearDBConnections" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ExportDatabase" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Path" Type="varchar(max)" Mode="In" />
+    <Parameter Name="BackUpName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetConsignmentProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="todate" Type="datetime" Mode="In" />
+    <Parameter Name="cId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetConsultantfeesDoctorFeesByDateRate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DID" Type="int" Mode="In" />
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GetCustomerCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="prefix" Type="varchar" Mode="In" />
+    <Parameter Name="TotalNumberlength" Type="int" Mode="In" />
+    <Parameter Name="PrefixLength" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetCustomerSaleByCuId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetCustomerSaleById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CustomerId" Type="int" Mode="In" />
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="todate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GetDailyDoctorFees" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DID" Type="int" Mode="In" />
+    <Parameter Name="Date" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GetDoctorFeesByDateRate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DID" Type="int" Mode="In" />
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+    <Parameter Name="Type" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetDoctorFeesConsultantFeeByDateRate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DID" Type="int" Mode="In" />
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+    <Parameter Name="Type" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetProductCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="prefix" Type="varchar" Mode="In" />
+    <Parameter Name="TotalNumberlength" Type="int" Mode="In" />
+    <Parameter Name="PrefixLength" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetProductReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetProfitandLoss" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GetProfitAndLossByBrandId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+    <Parameter Name="BrandId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetProfitAndLossByCouterId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+    <Parameter Name="counterID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetProfitAndLossByProductId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+    <Parameter Name="productID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetSaleSpecialPromotionByCustomerId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+    <Parameter Name="bId" Type="int" Mode="In" />
+    <Parameter Name="IsSaleTruePrice" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="GetSaleSpecialPromotionSegmentByCustomerId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+    <Parameter Name="bId" Type="int" Mode="In" />
+    <Parameter Name="IsSaleTruePrice" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="GetTotalAmountForCash" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Datetime" Type="datetime" Mode="In" />
+    <Parameter Name="PaymentTypeID" Type="int" Mode="In" />
+    <Parameter Name="CounterId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetTotalAmountForPrepaid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Datetime" Type="datetime" Mode="In" />
+    <Parameter Name="PaymentTypeID" Type="int" Mode="In" />
+    <Parameter Name="CounterId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetTotalAmountForRefund" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Datetime" Type="datetime" Mode="In" />
+    <Parameter Name="CounterId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetTotalTransactionQtyAndQty" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Datetime" Type="datetime" Mode="In" />
+    <Parameter Name="CounterId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetTransactionByGroup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="InsertDraft" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DateTime" Type="datetime" Mode="In" />
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="CounterId" Type="int" Mode="In" />
+    <Parameter Name="Type" Type="varchar" Mode="In" />
+    <Parameter Name="IsPaid" Type="bit" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="PaymentTypeId" Type="int" Mode="In" />
+    <Parameter Name="TaxAmount" Type="int" Mode="In" />
+    <Parameter Name="DiscountAmount" Type="int" Mode="In" />
+    <Parameter Name="TotalAmount" Type="bigint" Mode="In" />
+    <Parameter Name="RecieveAmount" Type="bigint" Mode="In" />
+    <Parameter Name="GiftCardId" Type="int" Mode="In" />
+    <Parameter Name="CustomerId" Type="int" Mode="In" />
+    <Parameter Name="DoctorId" Type="int" Mode="In" />
+    <Parameter Name="ServiceCharges" Type="int" Mode="In" />
+    <Parameter Name="GroupID" Type="int" Mode="In" />
+    <Parameter Name="Consultantfees" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertRefundTransaction" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DateTime" Type="datetime" Mode="In" />
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="CounterId" Type="int" Mode="In" />
+    <Parameter Name="Type" Type="varchar" Mode="In" />
+    <Parameter Name="IsPaid" Type="bit" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="PaymentTypeId" Type="int" Mode="In" />
+    <Parameter Name="TaxAmount" Type="int" Mode="In" />
+    <Parameter Name="DiscountAmount" Type="int" Mode="In" />
+    <Parameter Name="TotalAmount" Type="bigint" Mode="In" />
+    <Parameter Name="RecieveAmount" Type="bigint" Mode="In" />
+    <Parameter Name="ParentId" Type="varchar" Mode="In" />
+    <Parameter Name="GiftCardId" Type="int" Mode="In" />
+    <Parameter Name="CustomerId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="insertSPDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TransactionDetailID" Type="bigint" Mode="In" />
+    <Parameter Name="ParentProductID" Type="bigint" Mode="In" />
+    <Parameter Name="ChildProductID" Type="bigint" Mode="In" />
+    <Parameter Name="Price" Type="bigint" Mode="In" />
+    <Parameter Name="DiscountRate" Type="decimal" Mode="In" />
+    <Parameter Name="ShopCode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="InsertTransaction" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DateTime" Type="datetime" Mode="In" />
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="CounterId" Type="int" Mode="In" />
+    <Parameter Name="Type" Type="varchar" Mode="In" />
+    <Parameter Name="IsPaid" Type="bit" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="PaymentTypeId" Type="int" Mode="In" />
+    <Parameter Name="TaxAmount" Type="int" Mode="In" />
+    <Parameter Name="DiscountAmount" Type="int" Mode="In" />
+    <Parameter Name="TotalAmount" Type="bigint" Mode="In" />
+    <Parameter Name="RecieveAmount" Type="bigint" Mode="In" />
+    <Parameter Name="GiftCardId" Type="int" Mode="In" />
+    <Parameter Name="CustomerId" Type="int" Mode="In" />
+    <Parameter Name="DId" Type="int" Mode="In" />
+    <Parameter Name="ServiceCharges" Type="int" Mode="In" />
+    <Parameter Name="GroupID" Type="int" Mode="In" />
+    <Parameter Name="Consultantfees" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertTransactionDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TransactionId" Type="varchar" Mode="In" />
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="Qty" Type="int" Mode="In" />
+    <Parameter Name="UnitPrice" Type="int" Mode="In" />
+    <Parameter Name="DiscountRate" Type="decimal" Mode="In" />
+    <Parameter Name="TaxRate" Type="decimal" Mode="In" />
+    <Parameter Name="TotalAmount" Type="int" Mode="In" />
+    <Parameter Name="IsDeleted" Type="bit" Mode="In" />
+    <Parameter Name="InjectionRate" Type="decimal" Mode="In" />
+    <Parameter Name="PTRate" Type="decimal" Mode="In" />
+    <Parameter Name="XRayRate" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="Paid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="paid" Type="bit" Mode="In" />
+    <Parameter Name="Id" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ProductReportByBId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BrandId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ProductReportByCId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MainCategoryId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ProductReportByCIdAndBId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BrandId" Type="int" Mode="In" />
+    <Parameter Name="MainCategoryId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ProductReportBySCIdAndCId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MainCategoryId" Type="int" Mode="In" />
+    <Parameter Name="SubCategoryId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ProductReportBySCIdAndCIdAndBId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MainCategoryId" Type="int" Mode="In" />
+    <Parameter Name="SubCategoryId" Type="int" Mode="In" />
+    <Parameter Name="BrandId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PurchaseDiscountReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+    <Parameter Name="supplierId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PurchaseReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+    <Parameter Name="SupplierId" Type="int" Mode="In" />
+    <Parameter Name="BrandId" Type="int" Mode="In" />
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="SearchType" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="RefundItemList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="SaleBreakDownByRangeWithSaleTrueValue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+    <Parameter Name="isSp" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SaleBreakDownByRangeWithUnitValue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+    <Parameter Name="isSp" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SaleBreakDownBySegmentWithSaleTrueValue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+    <Parameter Name="isSp" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SaleBreakDownBySegmentWithUnitValue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+    <Parameter Name="isSp" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SaleItemListByDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="SelectItemListByDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+    <Parameter Name="IsSale" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SelectTaxesListByDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+    <Parameter Name="IsSale" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="Top100SaleItemList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+    <Parameter Name="IsAmount" Type="bit" Mode="In" />
+    <Parameter Name="num" Type="int" Mode="In" />
+  </Function>
+  <Function Name="TransactionDetailByItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+    <Parameter Name="IsSale" Type="bit" Mode="In" />
+    <Parameter Name="MainCategoryId" Type="int" Mode="In" />
+    <Parameter Name="SubCategoryId" Type="int" Mode="In" />
+    <Parameter Name="BrandId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="TransactionDetailReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+    <Parameter Name="IsSale" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="TransactionDetailReportByBId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+    <Parameter Name="IsSale" Type="bit" Mode="In" />
+    <Parameter Name="BrandId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="TransactionDetailReportByBIdAndCId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+    <Parameter Name="IsSale" Type="bit" Mode="In" />
+    <Parameter Name="BrandId" Type="int" Mode="In" />
+    <Parameter Name="MainCategoryId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="TransactionDetailReportByBIdAndCIdAndSCId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+    <Parameter Name="IsSale" Type="bit" Mode="In" />
+    <Parameter Name="BrandId" Type="int" Mode="In" />
+    <Parameter Name="MainCategoryId" Type="int" Mode="In" />
+    <Parameter Name="SubCategoryId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="TransactionDetailReportByCId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+    <Parameter Name="IsSale" Type="bit" Mode="In" />
+    <Parameter Name="MainCategoryId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="TransactionDetailReportBySCIdAndCId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="toDate" Type="datetime" Mode="In" />
+    <Parameter Name="IsSale" Type="bit" Mode="In" />
+    <Parameter Name="SubCategoryId" Type="int" Mode="In" />
+    <Parameter Name="MainCategoryId" Type="int" Mode="In" />
+  </Function>
+</Schema>
